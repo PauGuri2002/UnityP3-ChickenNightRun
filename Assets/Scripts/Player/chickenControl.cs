@@ -11,8 +11,6 @@ public class chickenControl : MonoBehaviour
 
     [SerializeField] private GameObject cam;
 
-    [SerializeField] private GameObject door;
-    private Animator _doorAnimator;
     [SerializeField]
     private Animator _playerAnimator;
 
@@ -28,13 +26,11 @@ public class chickenControl : MonoBehaviour
 
     private bool isJumped;
     private bool isRunning;
-    private bool isFlying;
-
-    private bool key = false;
-    private bool openDoorAvailability = false;
 
     private bool apexTrigger;
     private float apexLastFrame;
+
+    [HideInInspector] public ConversationExecuter availableConversation = null;
 
     [SerializeField] private GameObject modelKFC;
 
@@ -42,7 +38,6 @@ public class chickenControl : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
-        _doorAnimator = door.GetComponent<Animator>();
 
         speed = walkSpeed;
     }
@@ -116,15 +111,11 @@ public class chickenControl : MonoBehaviour
         }
     }
 
-    public void OnPickUp()
+    public void OnInteract()
     {
-        if (this.openDoorAvailability == false)
+        if(availableConversation != null)
         {
-            return;
-        }
-        if (this.key)
-        {
-            OpenFinalDoor();
+            availableConversation.ExecuteConversation();
         }
     }
 
@@ -172,21 +163,6 @@ public class chickenControl : MonoBehaviour
             apexTrigger = false;
             countJump = 0;
         }
-    }
-
-    private void OpenFinalDoor()
-    {
-        _doorAnimator.SetBool("open", true);
-    }
-
-    public void SetKey(bool value)
-    {
-        key = value;
-    }
-
-    public void SetOpenDoorAvailability(bool value)
-    {
-        openDoorAvailability = value;
     }
 
     public void Flying(bool value)

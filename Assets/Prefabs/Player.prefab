@@ -269,7 +269,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5079174525167319530}
         m_TargetAssemblyTypeName: chickenControl, Assembly-CSharp
-        m_MethodName: OnPickUp
+        m_MethodName: OnInteract
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -322,9 +322,9 @@ MonoBehaviour:
   highJump: 7
   glideForce: 5
   cam: {fileID: 0}
-  door: {fileID: 0}
   _playerAnimator: {fileID: 5457853736291740609}
   speed: 0
+  availableConversation: {fileID: 0}
   modelKFC: {fileID: 5151934217256745421}
 --- !u!114 &6282903418717495729
 MonoBehaviour:
