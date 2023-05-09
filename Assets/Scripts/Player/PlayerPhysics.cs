@@ -41,17 +41,19 @@ public class PlayerPhysics : MonoBehaviour
         {
             Die();
         }
-        if (other.gameObject.CompareTag("FinalDoor"))
+        ConversationExecuter ce = other.gameObject.GetComponent<ConversationExecuter>();
+        if (ce)
         {
-            this.chickenControl.SetOpenDoorAvailability(true);
+            chickenControl.availableConversation = ce;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("FinalDoor"))
+        ConversationExecuter ce = other.gameObject.GetComponent<ConversationExecuter>();
+        if (ce && chickenControl.availableConversation == ce)
         {
-            this.chickenControl.SetOpenDoorAvailability(false);
+            chickenControl.availableConversation = null;
         }
     }
 
