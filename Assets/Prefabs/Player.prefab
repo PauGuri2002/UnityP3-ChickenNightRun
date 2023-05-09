@@ -301,7 +301,7 @@ CharacterController:
   m_Radius: 1.313862
   m_SlopeLimit: 45
   m_StepOffset: 0.01
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.0001
   m_MinMoveDistance: 0
   m_Center: {x: 0.13924336, y: -2.2710667, z: -0.052188873}
 --- !u!114 &5079174525167319530
@@ -316,11 +316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c135783ac9c3149a08c4165332fb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 7
-  runSpeed: 13
-  gravity: 15
-  highJump: 7
-  glideForce: 5
+  walkSpeed: 0.5
+  runSpeed: 1
+  gravity: 2
+  highJump: 0.8
+  glideForce: 0.5
   cam: {fileID: 0}
   _playerAnimator: {fileID: 5457853736291740609}
   speed: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   camRotator: {fileID: 2541617839210178612}
   rotationSens: 20
   ZoomSens: 10
-  firstPersonHeight: 0.2
+  firstPersonHeight: 0.1
   playerRenderer: {fileID: 5151934217256745421}
 --- !u!114 &5457853735503463894
 MonoBehaviour:

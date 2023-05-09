@@ -95,7 +95,7 @@ public class CamMovement : MonoBehaviour
         else
         {
 
-            position = new Vector3(camRotator.position.x, camRotator.position.y + 0.5f, camRotator.position.z - 0.5f);
+            position = new Vector3(camRotator.position.x, camRotator.position.y + 0.15f, camRotator.position.z - 0.25f);
             playerRenderer.SetActive(true);
 
         }
