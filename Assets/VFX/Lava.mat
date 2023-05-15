@@ -39,7 +39,7 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _NoiseScale: 10
     m_Colors:
-    - _Color: {r: 1.3584906, g: 0.105076626, b: 0, a: 1}
+    - _Color: {r: 1.539927, g: 0.123904854, b: 0.01612492, a: 1}
     - _NoiseSpeed: {r: 0, g: 0.2, b: 0, a: 0}
     - _NoiseSpeed2: {r: 0.2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

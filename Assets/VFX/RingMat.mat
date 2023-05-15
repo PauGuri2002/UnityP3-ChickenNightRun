@@ -25,7 +25,9 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _NoiseScale: 50
+    - _Strength: 10
     m_Colors:
+    - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Color: {r: 11.313708, g: 10.160153, b: 1.1979221, a: 1}
     - _NoiseSpeed: {r: 0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
