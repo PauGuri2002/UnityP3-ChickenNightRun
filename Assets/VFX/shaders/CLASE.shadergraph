@@ -3076,11 +3076,11 @@
     "m_SerializableAlphaKeys": [
         {
             "x": 1.0,
-            "y": 0.0
+            "y": 0.1735256016254425
         },
         {
             "x": 0.0,
-            "y": 1.0
+            "y": 0.8205844163894653
         }
     ],
     "m_SerializableMode": 0
@@ -3121,7 +3121,7 @@
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
     "m_CustomEditorGUI": "",
-    "m_SupportVFX": false
+    "m_SupportVFX": true
 }
 
 {
@@ -4825,20 +4825,20 @@
             "w": 0.0
         },
         {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
             "w": 1.0
         }
     ],
     "m_SerializableAlphaKeys": [
         {
             "x": 1.0,
-            "y": 0.2058899849653244
+            "y": 0.14999619126319886
         },
         {
             "x": 0.0,
-            "y": 0.6000000238418579
+            "y": 0.8411840796470642
         }
     ],
     "m_SerializableMode": 0
@@ -7343,11 +7343,11 @@
     "m_SerializableAlphaKeys": [
         {
             "x": 1.0,
-            "y": 0.20294499397277833
+            "y": 0.15588617324829102
         },
         {
             "x": 0.0,
-            "y": 0.7176470756530762
+            "y": 0.8176546692848206
         }
     ],
     "m_SerializableMode": 0
