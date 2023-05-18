@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 401cf550e4ebde64bb4dec6e8f08945f, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -67,12 +67,12 @@ Material:
     - _SurfaceNoiseSpeed: 2
     - _SurfaceNoiseStrength: 0.5
     m_Colors:
-    - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
-    - _BubblesEmission: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 0, b: 0.027940273, a: 1}
+    - _BubblesEmission: {r: 0.9150943, g: 0.03476084, b: 0, a: 0}
     - _Color: {r: 1367.1202, g: 107.36546, b: 0, a: 1}
     - _Flow: {r: 0, g: 1, b: 0, a: 0}
     - _SplurColor: {r: 0, g: 0, b: 0, a: 0}
-    - _SplurEmission: {r: 0, g: 0, b: 0, a: 1}
+    - _SplurEmission: {r: 1, g: 0.2629043, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5601645759679917964
 MonoBehaviour:
