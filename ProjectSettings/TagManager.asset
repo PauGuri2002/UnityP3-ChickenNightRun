@@ -8,6 +8,7 @@ TagManager:
   - Killer
   - Hitter
   - FinalDoor
+  - switchLight
   layers:
   - Default
   - TransparentFX
