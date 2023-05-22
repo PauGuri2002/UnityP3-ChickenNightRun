@@ -5,7 +5,8 @@ using UnityEngine;
 public class LightSwitch : MonoBehaviour
 {
     public GameObject switchOn, switchOff;
-    public GameObject[] lightPanel;
+    public GameObject[] lightPanelON;
+    public GameObject[] lightPanelOFF;
     public Light[] lightHelp;
     private bool toggleLight = true;
 
@@ -28,9 +29,13 @@ public class LightSwitch : MonoBehaviour
                 {
                     light.enabled = true;
                 }
-                foreach (GameObject panel in lightPanel)
+                foreach (GameObject panel in lightPanelON)
                 {
                     panel.SetActive(true);
+                }
+                foreach(GameObject panelOFF in lightPanelOFF)
+                {
+                    panelOFF.SetActive(false);
                 }
             }
             else if (toggleLight == false)
@@ -42,9 +47,13 @@ public class LightSwitch : MonoBehaviour
                 {
                     light.enabled = false;
                 }
-                foreach (GameObject panel in lightPanel)
+                foreach (GameObject panel in lightPanelON)
                 {
                     panel.SetActive(false);
+                }
+                foreach (GameObject panelOFF in lightPanelOFF)
+                {
+                    panelOFF.SetActive(true);
                 }
             }
         }
