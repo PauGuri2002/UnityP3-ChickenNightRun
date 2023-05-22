@@ -7,7 +7,7 @@ public class LightSwitch : MonoBehaviour
     public GameObject switchOn, switchOff;
     public GameObject[] lightPanel;
     public Light[] lightHelp;
-    public bool toggleLight = true;
+    private bool toggleLight = true;
 
     private void Update()
     {
@@ -21,7 +21,7 @@ public class LightSwitch : MonoBehaviour
             Debug.Log(other);
             if (toggleLight == true)
             {
-                //toggleLight = false;
+                toggleLight = false;
                 switchOn.SetActive(true);
                 switchOff.SetActive(false);
                 foreach (Light light in lightHelp)
@@ -33,9 +33,9 @@ public class LightSwitch : MonoBehaviour
                     panel.SetActive(true);
                 }
             }
-            if (toggleLight == false)
+            else if (toggleLight == false)
             {
-                //toggleLight=true;
+                toggleLight = true;
                 switchOn.SetActive(false);
                 switchOff.SetActive(true);
                 foreach (Light light in lightHelp)
@@ -49,20 +49,4 @@ public class LightSwitch : MonoBehaviour
             }
         }
     }
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        if (toggleLight == true) 
-    //        {
-    //            Debug.Log("entra");
-    //            toggleLight = false;
-    //        }
-
-    //        if (toggleLight == false)
-    //        { 
-    //            toggleLight = true; 
-    //        }
-    //    }
-    //}
 }
