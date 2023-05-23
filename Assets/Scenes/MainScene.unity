@@ -7459,7 +7459,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 1966982806}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 0
@@ -20955,6 +20955,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 366734988}
+--- !u!4 &1966982806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
+  m_PrefabInstance: {fileID: 5457853735718142800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1981355240
 GameObject:
   m_ObjectHideFlags: 0
