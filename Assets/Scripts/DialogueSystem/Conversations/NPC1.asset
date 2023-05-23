@@ -19,23 +19,28 @@ MonoBehaviour:
     buttons:
     - text: Aha interesante
       targetNodeIndex: 1
+      onClickEvent: 0
   - nodeType: 0
     speakerName: Pepito
     text: "Hasta luego mu bueno d\xEDah"
     buttons:
     - text: A tomar pol culo
       targetNodeIndex: 2
+      onClickEvent: 0
     - text: XD?
       targetNodeIndex: 3
+      onClickEvent: 0
   - nodeType: 2
     speakerName: Pepito
     text: Eeeeeeeeeeeeeeeeeeeee cabroonnnn
     buttons:
     - text: hehe
       targetNodeIndex: -1
+      onClickEvent: 0
   - nodeType: 0
     speakerName: Pepito
     text: xd
     buttons:
     - text: xddddddd
       targetNodeIndex: -1
+      onClickEvent: 0
