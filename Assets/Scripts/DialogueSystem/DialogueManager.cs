@@ -1,14 +1,24 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
 
+    [SerializeField] private chickenControl chickenControl;
     [SerializeField] private GameObject dialogueObject;
     [SerializeField] private TextMeshProUGUI speakerText;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private GameObject buttonsContainer;
+    [SerializeField] private GameObject buttonPrefab;
+    [SerializeField] private float typingDelay = 0.1f;
+    [SerializeField] private DialogueEventManager dialogueEventManager;
+    private Conversation currentConversation;
+    private int dialogueIndex;
+    Coroutine writingCoroutine;
+
     private void Awake()
     {
         if(instance != null)
@@ -22,51 +32,113 @@ public class DialogueManager : MonoBehaviour
     public void ShowDialogue(Conversation conversation)
     {
         dialogueObject.SetActive(true);
-        dialogueText.text = conversation.nodes[0].text;
-        speakerText.text = conversation.nodes[0].speakerName;
+        currentConversation = conversation;
+        dialogueIndex = 0;
+        ShowDialogueNode(conversation.nodes[0]);
     }
 
-    private IEnumerator WriteText(string dialogueText)
+    public void HideDialogue()
     {
-        char[] textArr = dialogueText.ToCharArray();
-        text.text = "";
+        dialogueObject.SetActive(false);
+    }
 
-        while (text.text.Length < dialogueText.Length)
+    public void ShowDialogueNode(ConversationNode node)
+    {
+        // speaker
+        speakerText.text = node.speakerName;
+
+        // buttons
+        foreach(Transform child in buttonsContainer.transform)
         {
-            text.text += textArr[text.text.Length];
+            Destroy(child.gameObject);
+        }
+
+        if(node.buttons.Length > 0)
+        {
+            foreach(ConversationButton button in node.buttons)
+            {
+                GameObject buttonInstance = Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity);
+                Button buttonComponent = buttonInstance.GetComponent<Button>();
+                if(button.targetNodeIndex < 0)
+                {
+                    buttonComponent.onClick.AddListener(HideDialogue);
+                } else
+                {
+                    buttonComponent.onClick.AddListener(() => ShowDialogueNode(currentConversation.nodes[button.targetNodeIndex]));
+                }
+
+                if(button.onClickEvent != DialogueEventManager.ChickenEvent.None)
+                {
+                    buttonComponent.onClick.AddListener(() => dialogueEventManager.FireDialogueEvent(button.onClickEvent));
+                }
+                buttonInstance.transform.SetParent(buttonsContainer.transform, false);
+            }
+        }
+
+        // text
+        if(writingCoroutine != null)
+        {
+            StopCoroutine(writingCoroutine);
+        }
+        writingCoroutine = StartCoroutine(WriteText(node.text));
+
+    }
+
+    private IEnumerator WriteText(string dialogueString)
+    {
+        char[] textArr = dialogueString.ToCharArray();
+        dialogueText.text = "";
+
+        while (dialogueText.text.Length < dialogueString.Length)
+        {
+            dialogueText.text += textArr[dialogueText.text.Length];
             yield return new WaitForSeconds(typingDelay);
         }
         dialogueIndex++;
         writingCoroutine = null;
     }
 
-    private void Interact(PlayerCore player)
+    public void SkipWriting()
     {
-        if (currentDialogue == null) { return; }
+        if(currentConversation == null)
+        {
+            return;
+        }
 
-        if (writingCoroutine != null) // if the current section of dialoge has not finished getting written
+        if(writingCoroutine != null)
         {
             StopCoroutine(writingCoroutine);
-            writingCoroutine = null;
-            text.text = currentDialogue.parts[dialogueIndex];
-            dialogueIndex++;
-        }
-        else if (dialogueIndex < currentDialogue.parts.Length) // otherwise, if there are more sections of dialogue to be written
-        {
-            writingCoroutine = StartCoroutine(WriteText(currentDialogue.parts[dialogueIndex]));
-        }
-        else // otherwise, if the dialogue is done
-        {
-            if (bgAnimationCoroutine != null)
-            {
-                StopCoroutine(bgAnimationCoroutine);
-                bgAnimationCoroutine = null;
-            }
-
-            finishCallback?.Invoke(null);
-            UIManager.OnUISelect -= Interact;
-            PlayerManager.Instance.ChangeInputMapAll("Player");
-            Destroy(gameObject);
+            dialogueText.text = currentConversation.nodes[dialogueIndex].text;
         }
     }
+
+    //private void Interact()
+    //{
+    //    if (currentDialogue == null) { return; }
+
+    //    if (writingCoroutine != null) // if the current section of dialoge has not finished getting written
+    //    {
+    //        StopCoroutine(writingCoroutine);
+    //        writingCoroutine = null;
+    //        text.text = currentDialogue.parts[dialogueIndex];
+    //        dialogueIndex++;
+    //    }
+    //    else if (dialogueIndex < currentDialogue.parts.Length) // otherwise, if there are more sections of dialogue to be written
+    //    {
+    //        writingCoroutine = StartCoroutine(WriteText(currentDialogue.parts[dialogueIndex]));
+    //    }
+    //    else // otherwise, if the dialogue is done
+    //    {
+    //        if (bgAnimationCoroutine != null)
+    //        {
+    //            StopCoroutine(bgAnimationCoroutine);
+    //            bgAnimationCoroutine = null;
+    //        }
+
+    //        finishCallback?.Invoke(null);
+    //        UIManager.OnUISelect -= Interact;
+    //        PlayerManager.Instance.ChangeInputMapAll("Player");
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

@@ -1,19 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueEventManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private DialogueEvent[] eventList;
 
-    // Update is called once per frame
-    void Update()
+    public void FireDialogueEvent(ChickenEvent eventId)
     {
-        
+        UnityEvent e = Array.Find(eventList, (elem) => elem.eventId == eventId).onEventCall;
+        e?.Invoke();
     }
 
     public enum ChickenEvent

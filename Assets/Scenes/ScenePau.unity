@@ -286,6 +286,10 @@ MonoBehaviour:
   dialogueObject: {fileID: 1867568245}
   speakerText: {fileID: 790637078}
   dialogueText: {fileID: 253534543}
+  buttonsContainer: {fileID: 326561038}
+  buttonPrefab: {fileID: 1304844195135495201, guid: 6e7875785672ea045bdd383ee11b5761, type: 3}
+  typingDelay: 0.1
+  dialogueEventManager: {fileID: 126433988}
 --- !u!114 &126433984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6665cc2c3c27cfe4aa6085ffb270646d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventList: []
 --- !u!1 &253534541
 GameObject:
   m_ObjectHideFlags: 0
