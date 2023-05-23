@@ -13,6 +13,8 @@ public class HitterHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Killer")) { Destroy(gameObject); }
+
         PlayerPhysics pp = collision.gameObject.GetComponent<PlayerPhysics>();
         
         if (pp != null)
