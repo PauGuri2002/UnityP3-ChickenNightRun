@@ -14,4 +14,9 @@ public class SwapPostProcessing : MonoBehaviour
             GetComponent<Volume>().isGlobal = true;
         }
     }
+
+    public void VolumeOFF()
+    {
+        GetComponent<Volume>().isGlobal = false;
+    }
 }
