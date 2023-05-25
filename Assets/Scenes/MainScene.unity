@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 151345872}
   - component: {fileID: 151345874}
   - component: {fileID: 151345873}
+  - component: {fileID: 151345875}
   m_Layer: 3
   m_Name: lastPath
   m_TagString: Untagged
@@ -566,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
-  priority: 1
+  priority: 2
   blendDistance: 0.1
   weight: 1
   sharedProfile: {fileID: 11400000, guid: d07de3c034828f44495b069a4a83704d, type: 2}
@@ -583,6 +584,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.487505, y: 2.0703619, z: 0.38476753}
   m_Center: {x: -0.6965809, y: 0.692835, z: -0.2785616}
+--- !u!114 &151345875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151345871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7132b5f8a43895646857eaf4e18cff8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &190927045
 GameObject:
   m_ObjectHideFlags: 0
@@ -15709,22 +15722,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1123373947}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: HintDisplayer, Assembly-CSharp
-        m_MethodName: ChangeUIText
-        m_Mode: 5
+      - m_Target: {fileID: 151345875}
+        m_TargetAssemblyTypeName: SwapPostProcessing, Assembly-CSharp
+        m_MethodName: VolumeOFF
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26856,15 +26857,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.569
+      value: 16.708
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.102
+      value: 4.135
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.156
+      value: -29.192
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalRotation.w
