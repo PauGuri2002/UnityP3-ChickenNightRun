@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         instance = this;
+        gameObject.SetActive(false);
     }
 
     public void ShowDialogue(Conversation conversation)
