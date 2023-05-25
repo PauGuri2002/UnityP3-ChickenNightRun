@@ -383,6 +383,7 @@ Transform:
   - {fileID: 566367079}
   - {fileID: 91709816}
   - {fileID: 1123373948}
+  - {fileID: 998514316}
   - {fileID: 511794006}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -531,6 +532,7 @@ GameObject:
   - component: {fileID: 151345872}
   - component: {fileID: 151345874}
   - component: {fileID: 151345873}
+  - component: {fileID: 151345875}
   m_Layer: 3
   m_Name: lastPath
   m_TagString: Untagged
@@ -566,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
-  priority: 1
+  priority: 2
   blendDistance: 0.1
   weight: 1
   sharedProfile: {fileID: 11400000, guid: d07de3c034828f44495b069a4a83704d, type: 2}
@@ -583,6 +585,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.487505, y: 2.0703619, z: 0.38476753}
   m_Center: {x: -0.6965809, y: 0.692835, z: -0.2785616}
+--- !u!114 &151345875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151345871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7132b5f8a43895646857eaf4e18cff8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &190927045
 GameObject:
   m_ObjectHideFlags: 0
@@ -6929,7 +6943,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 97909653}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &520889271
 GameObject:
@@ -14762,6 +14776,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &998514315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 998514316}
+  - component: {fileID: 998514317}
+  m_Layer: 0
+  m_Name: FireworksPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &998514316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998514315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -221.4, y: 55, z: 50.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 97909653}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998514317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998514315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757ec282b8990e84782b60b53bd662fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireworks: {fileID: 19730513763132046, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
 --- !u!1 &1016891168
 GameObject:
   m_ObjectHideFlags: 0
@@ -15709,22 +15768,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1123373947}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: HintDisplayer, Assembly-CSharp
-        m_MethodName: ChangeUIText
-        m_Mode: 5
+      - m_Target: {fileID: 151345875}
+        m_TargetAssemblyTypeName: SwapPostProcessing, Assembly-CSharp
+        m_MethodName: VolumeOFF
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15732,6 +15779,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 'Hint: After grabbing a key, press E near a door to open
             it.'
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 998514317}
+        m_TargetAssemblyTypeName: Fireworks, Assembly-CSharp
+        m_MethodName: SpawnFireworks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1123373950
@@ -26856,15 +26915,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.569
+      value: 16.48
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.102
+      value: 4.187
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.156
+      value: -29.227
       objectReference: {fileID: 0}
     - target: {fileID: 5457853735503463893, guid: be67e05f8c7c90b44b1d734f137e1efd, type: 3}
       propertyPath: m_LocalRotation.w
