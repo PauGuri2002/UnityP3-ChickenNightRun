@@ -119,6 +119,11 @@ public class chickenControl : MonoBehaviour
         }
     }
 
+    public void OnPause()
+    {
+        PauseMenu.instance.ToggleScreen();
+    }
+
     void Movement()
     {
         if (characterController.enabled == false) { return; }
