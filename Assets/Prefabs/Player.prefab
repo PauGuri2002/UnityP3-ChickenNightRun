@@ -170,7 +170,19 @@ MonoBehaviour:
     m_ActionId: 3888f6ef-aa30-49d2-9043-2970c5d12ad5
     m_ActionName: Player/ToggleCamera[/Keyboard/r]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5079174525167319530}
+        m_TargetAssemblyTypeName: chickenControl, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1723a59d-7ac6-4ebb-8b80-95202e77515e
     m_ActionName: Player/Pause[/Keyboard/escape]
   - m_PersistentCalls:
@@ -317,9 +329,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 0.5
-  runSpeed: 1
+  runSpeed: 0.5
   gravity: 2
-  highJump: 0.8
+  highJump: 0.5
   glideForce: 0.5
   cam: {fileID: 0}
   _playerAnimator: {fileID: 5457853736291740609}

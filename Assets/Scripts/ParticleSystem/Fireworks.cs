@@ -5,10 +5,12 @@ using UnityEngine;
 public class Fireworks : MonoBehaviour
 {
     public GameObject fireworks;
+    private bool areSpawned = false;
      public void SpawnFireworks()
-    {       
-            
-            Instantiate(fireworks,transform.position,Quaternion.Euler(-90,0,0));
+    {
+        if (areSpawned) { return; }
+        Instantiate(fireworks,transform.position,Quaternion.Euler(-90,0,0));
+        areSpawned = true;
         
     }
 }
