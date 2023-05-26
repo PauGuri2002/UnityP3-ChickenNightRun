@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 5457853735718142801}
     - target: {fileID: 2076103020117425574, guid: 33f2779e8377f2c44b16065a0cd5653a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.849243
+      value: -15.849121
       objectReference: {fileID: 0}
     - target: {fileID: 7954528758050930961, guid: 33f2779e8377f2c44b16065a0cd5653a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6379,7 +6379,7 @@ ReflectionProbe:
   m_Resolution: 1024
   m_UpdateFrequency: 0
   m_BoxSize: {x: 3.8670359, y: 0.4852488, z: 2.2534065}
-  m_BoxOffset: {x: -1.5403404, y: -0.012388229, z: 0.78400993}
+  m_BoxOffset: {x: -1.6648731, y: -0.012388229, z: 0.78400993}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -6404,7 +6404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366734986}
   m_LocalRotation: {x: -0.001589605, y: -0.9996178, z: -0.0066546896, w: -0.026786596}
-  m_LocalPosition: {x: 0.38622242, y: 0, z: 1.0231094}
+  m_LocalPosition: {x: 0.41815388, y: 0, z: 1.0231094}
   m_LocalScale: {x: 0.15680376, y: 1.5248255, z: 1.196686}
   m_ConstrainProportionsScale: 1
   m_Children: []
