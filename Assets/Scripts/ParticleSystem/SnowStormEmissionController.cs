@@ -20,7 +20,7 @@ public class SnowStormEmissionController : MonoBehaviour
     [SerializeField]
     private float MaxStartSizeSpeed = 0.15f;
     [SerializeField]
-    private float maxSnowSizeValue = 1.6f;
+    private float maxSnowSizeValue = 1.2f;
 
     [SerializeField]
     public float noiseFrequencySpeed = 0.1f;
