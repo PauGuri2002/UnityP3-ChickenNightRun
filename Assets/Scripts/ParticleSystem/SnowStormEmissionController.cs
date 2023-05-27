@@ -8,7 +8,6 @@ public class SnowStormEmissionController : MonoBehaviour
     public float emissionSpeed = 1f; // Adjust this to control the speed of emission augmentation
 
     private ParticleSystem particleSystem;
-    private float currentTime;
 
     [SerializeField]
     public float startingSize = 10f;
@@ -20,37 +19,37 @@ public class SnowStormEmissionController : MonoBehaviour
     private float MinStartSizeSpeed = 0.1f;
     [SerializeField]
     private float MaxStartSizeSpeed = 0.15f;
+    [SerializeField]
+    private float maxSnowSizeValue = 1.6f;
 
     [SerializeField]
     public float noiseFrequencySpeed = 0.1f;
     [SerializeField]
     public float noiseStrengthSpeed = 0.01f;
 
-    private float intensity;
+    private float intensity = 0f;
 
     private void Start()
     {
         particleSystem = GetComponent<ParticleSystem>();
-        currentTime = 0f;
     }
 
     private void Update()
     {
-        intensity = updateIntensity();
+        updateIntensity();
         augmentEmmission();
         augmentStartSize();
         modifyNoise();
 
     }
     
-    private float updateIntensity()
+    private void updateIntensity()
     {
-        return currentTime += Time.deltaTime;
+        intensity += Time.deltaTime;
     }
 
     private void augmentEmmission()
     {
-       // currentTime += Time.deltaTime * emissionSpeed;
         float normalizedTime = intensity / particleSystem.main.duration;
         float emissionRate = intensity * emissionSpeed;
         var emissionModule = particleSystem.emission;
@@ -59,6 +58,10 @@ public class SnowStormEmissionController : MonoBehaviour
 
     private void augmentStartSize()
     {
+        if (maxCurveValue > maxSnowSizeValue)
+        {
+            return;
+        }
         minCurveValue = intensity * MinStartSizeSpeed;
         maxCurveValue = intensity * MaxStartSizeSpeed;
         var mainModule = particleSystem.main;
