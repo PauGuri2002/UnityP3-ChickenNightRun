@@ -295,6 +295,70 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1001 &1084385211
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132035, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19730513763132046, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: m_Name
+      value: Fireworks
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050491219878959264, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+      propertyPath: DieSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c4aec2e70624ea740b6d78bc9e399809, type: 3}
+    m_RemovedComponents:
+    - {fileID: 4526427790688595593, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+    - {fileID: 753480527745716784, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+    - {fileID: 3841812454575551777, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 015e8f06f932d8d44a7912ff05158fe4, type: 3}
 --- !u!1 &1449202049
 GameObject:
   m_ObjectHideFlags: 0
