@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private chickenControl chickenControl;
     [SerializeField] private GameObject dialogueObject;
+    [SerializeField] private Image dialogueContainer;
     [SerializeField] private TextMeshProUGUI speakerText;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject buttonsContainer;
@@ -18,34 +20,35 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float typingDelay = 0.1f;
     [SerializeField] private DialogueEventManager dialogueEventManager;
     private Conversation currentConversation;
-    private int dialogueIndex;
+    private ConversationNode currentNode;
     private List<GameObject> createdButtons = new List<GameObject>();
     Coroutine writingCoroutine;
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(instance.gameObject);
         }
 
         instance = this;
-        gameObject.SetActive(false);
+        dialogueObject.SetActive(false);
     }
 
     public void ShowDialogue(Conversation conversation)
     {
-        if(currentConversation != null) { return; }
+        if (currentConversation != null) { return; }
 
+        chickenControl.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
         Cursor.lockState = CursorLockMode.None;
         dialogueObject.SetActive(true);
         currentConversation = conversation;
-        dialogueIndex = 0;
         ShowDialogueNode(conversation.nodes[0]);
     }
 
     public void HideDialogue()
     {
+        chickenControl.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
         Cursor.lockState = CursorLockMode.Locked;
         currentConversation = null;
         dialogueObject.SetActive(false);
@@ -53,6 +56,17 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogueNode(ConversationNode node)
     {
+        currentNode = node;
+
+        // background
+        Color32 bgColor = node.nodeType switch
+        {
+            NodeType.Thinking => new Color32(105, 187, 215, 237),
+            NodeType.Surprise => new Color32(214, 125, 104, 237),
+            _ => new Color32(96, 96, 96, 237),
+        };
+        dialogueContainer.color = bgColor;
+
         // speaker
         speakerText.text = node.speakerName;
 
@@ -65,7 +79,7 @@ public class DialogueManager : MonoBehaviour
         createdButtons.Clear();
 
         // text
-        if(writingCoroutine != null)
+        if (writingCoroutine != null)
         {
             StopCoroutine(writingCoroutine);
         }
@@ -118,23 +132,21 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typingDelay);
         }
         writingCoroutine = null;
-        ShowDialogueButtons(currentConversation.nodes[dialogueIndex]);
-        dialogueIndex++;
+        ShowDialogueButtons(currentNode);
     }
 
     public void SkipWriting()
     {
-        if(currentConversation == null)
+        if (currentConversation == null)
         {
             return;
         }
 
-        if(writingCoroutine != null)
+        if (writingCoroutine != null)
         {
             StopCoroutine(writingCoroutine);
-            dialogueText.text = currentConversation.nodes[dialogueIndex].text;
-            ShowDialogueButtons(currentConversation.nodes[dialogueIndex]);
-            dialogueIndex++;
+            dialogueText.text = currentNode.text;
+            ShowDialogueButtons(currentNode);
         }
     }
 }

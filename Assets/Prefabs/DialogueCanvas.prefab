@@ -537,6 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chickenControl: {fileID: 0}
   dialogueObject: {fileID: 2076103020117425573}
+  dialogueContainer: {fileID: 2076103019625713420}
   speakerText: {fileID: 2076103019044668358}
   dialogueText: {fileID: 2076103018511239327}
   buttonsContainer: {fileID: 2076103018302981342}

@@ -13,34 +13,47 @@ MonoBehaviour:
   m_Name: NPC1
   m_EditorClassIdentifier: 
   nodes:
-  - nodeType: 1
-    speakerName: Pepe
-    text: "Hola bueno dia me yamo manu\xE9"
+  - nodeType: 0
+    speakerName: Manuela
+    text: Buenas noches! Bienvenido al restaurante.
     buttons:
-    - text: Aha interesante
+    - text: Gracias...?
       targetNodeIndex: 1
       onClickEvent: 0
-  - nodeType: 0
-    speakerName: Pepito
-    text: "Hasta luego mu bueno d\xEDah"
+  - nodeType: 1
+    speakerName: Manuela
+    text: "(No parece muy convencido de querer estar aqu\xED, ni que nos lo vayamos
+      a comer o algo...)"
     buttons:
-    - text: A tomar pol culo
+    - text: Eh, te estoy oyendo
       targetNodeIndex: 2
       onClickEvent: 0
-    - text: XD?
+  - nodeType: 2
+    speakerName: Manuela
+    text: "\xBFQu\xE9? \xBF\xA1C\xF3mo!? Bueno a lo que iba, puede que tengamos algunos
+      problemillas con... la calefacci\xF3n. Pero no te preocupes, lo arreglaremos
+      en seguida."
+    buttons:
+    - text: "\xBFD\xF3nde est\xE1 mi mesa?"
       targetNodeIndex: 3
       onClickEvent: 0
-  - nodeType: 2
-    speakerName: Pepito
-    text: Eeeeeeeeeeeeeeeeeeeee cabroonnnn
+    - text: "\xBFNo me vas a cocinar?"
+      targetNodeIndex: 4
+      onClickEvent: 0
+  - nodeType: 0
+    speakerName: Manuela
+    text: "Su mesa est\xE1 al otro lado de esta sala, a trav\xE9s de la ventana.
+      Ah, y si necesita un poco m\xE1s de luz, detras suyo tiene el interruptor."
     buttons:
-    - text: hehe
+    - text: Muchas gracias
       targetNodeIndex: -1
       onClickEvent: 0
   - nodeType: 0
-    speakerName: Pepito
-    text: xd
+    speakerName: Manuela
+    text: "Nah, tengo cosas m\xE1s importantes que hacer ahora mismo. Date una vuelta
+      por ah\xED si quieres, y si te cuesta ver por d\xF3nde vas, detr\xE1s tuyo
+      tienes el interruptor de la luz."
     buttons:
-    - text: xddddddd
+    - text: De locos
       targetNodeIndex: -1
       onClickEvent: 0

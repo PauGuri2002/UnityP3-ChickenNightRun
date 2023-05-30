@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
@@ -10,16 +8,10 @@ public class LightSwitch : MonoBehaviour
     public Light[] lightHelp;
     private bool toggleLight = true;
 
-    private void Update()
-    {
-        Debug.Log("State:" + toggleLight);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(other);
             if (toggleLight == true)
             {
                 toggleLight = false;
@@ -33,7 +25,7 @@ public class LightSwitch : MonoBehaviour
                 {
                     panel.SetActive(true);
                 }
-                foreach(GameObject panelOFF in lightPanelOFF)
+                foreach (GameObject panelOFF in lightPanelOFF)
                 {
                     panelOFF.SetActive(false);
                 }
