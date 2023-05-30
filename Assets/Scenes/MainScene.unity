@@ -6113,6 +6113,7 @@ MonoBehaviour:
   startingSize: 10
   MinStartSizeSpeed: 0.1
   MaxStartSizeSpeed: 0.15
+  maxSnowSizeValue: 1.2
   noiseFrequencySpeed: 0.1
   noiseStrengthSpeed: 0.01
 --- !u!1 &275875293
