@@ -59,7 +59,7 @@ MonoBehaviour:
     buttons:
     - text: How convenient
       targetNodeIndex: -1
-      onClickEvent: 3
+      onClickEvent: 6
   - nodeType: 0
     speakerName: Antonella
     text: A lobster would've been the perfect item to get us out of a situation like

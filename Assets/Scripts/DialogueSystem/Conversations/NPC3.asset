@@ -29,11 +29,43 @@ MonoBehaviour:
     buttons:
     - text: See ya
       targetNodeIndex: -1
-      onClickEvent: 0
+      onClickEvent: 2
   - nodeType: 0
     speakerName: Gigachella
-    text: Hey! Not cool man!
+    text: All right... Tell me! What do you prefer? A flavor that reminds you of
+      the good ol' times, a flavor that makes you wanna party, or a super extreme
+      illegal flavor  for bad boys?
     buttons:
-    - text: See ya
+    - text: None
+      targetNodeIndex: 1
+      onClickEvent: 0
+    - text: Old times
+      targetNodeIndex: 3
+      onClickEvent: 3
+    - text: Party
+      targetNodeIndex: 4
+      onClickEvent: 4
+    - text: I'm a bad boy
+      targetNodeIndex: 5
+      onClickEvent: 5
+  - nodeType: 1
+    speakerName: Gigachella
+    text: Ahhhh, the old times....
+    buttons:
+    - text: Feel younger already
+      targetNodeIndex: -1
+      onClickEvent: 0
+  - nodeType: 2
+    speakerName: Gigachella
+    text: Let's party, THE HOUSE IS ON FIRE!
+    buttons:
+    - text: It really is
+      targetNodeIndex: -1
+      onClickEvent: 0
+  - nodeType: 2
+    speakerName: Gigachella
+    text: Don't tell anyone I've given you this one, it's our little secret.
+    buttons:
+    - text: Woah, where am I
       targetNodeIndex: -1
       onClickEvent: 0

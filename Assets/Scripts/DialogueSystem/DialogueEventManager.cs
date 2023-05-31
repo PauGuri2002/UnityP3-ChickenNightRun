@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,7 +16,10 @@ public class DialogueEventManager : MonoBehaviour
     {
         None,
         GetHitEvent,
-        ChangePostprocessingEvent,
+        ResetEffectsEvent,
+        OldTimesEvent,
+        DiscoEvent,
+        DrunkEvent,
         GetUmbrellaEvent
     }
 }
