@@ -37,7 +37,7 @@ public class volumeOptions : MonoBehaviour
     {
         if (!string.Equals(activeProfile.name, volume.profile.name))
         {
-            activeProfile = volume.profile;
+            volume.profile = activeProfile;
 
             if (activeProfile.TryGet(out lensDistortion))
             {
