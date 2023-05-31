@@ -19,7 +19,7 @@ MonoBehaviour:
     buttons:
     - text: No, I hate them
       targetNodeIndex: 1
-      onClickEvent: 0
+      onClickEvent: 2
     - text: Ok
       targetNodeIndex: 2
       onClickEvent: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
     buttons:
     - text: See ya
       targetNodeIndex: -1
-      onClickEvent: 2
+      onClickEvent: 0
   - nodeType: 0
     speakerName: Gigachella
     text: All right... Tell me! What do you prefer? A flavor that reminds you of
