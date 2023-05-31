@@ -14,71 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - nodeType: 0
-    speakerName: Antonella
-    text: Hey look! It's snowing! It's so beautiful it almost makes me forget I'm
-      being burnt alive by the fires of hell.
+    speakerName: Gigachella
+    text: Yooooo, wanna see some cool shit bro? Wanna taste my latest creations?
     buttons:
-    - text: If you say so...
+    - text: Nah
       targetNodeIndex: 1
       onClickEvent: 0
-  - nodeType: 2
-    speakerName: Antonella
-    text: Actually, I think this snow storm is getting more intense by the second,
-      we should seek shelter immediately!
-    buttons:
-    - text: WHERE DO WE GO
+    - text: Ok
       targetNodeIndex: 2
       onClickEvent: 0
-    - text: Any ideas?
-      targetNodeIndex: 3
-      onClickEvent: 0
   - nodeType: 2
-    speakerName: Antonella
-    text: OH NO! THERE'S NOWHERE TO GO!! WE'RE DOOMED CHICKEN!
+    speakerName: Gigachella
+    text: Hey! Not cool man!
     buttons:
-    - text: '*dies*'
+    - text: See ya
       targetNodeIndex: -1
-      onClickEvent: 1
-  - nodeType: 1
-    speakerName: Antonella
-    text: Hmmmm, I only have this umbrella on me, I doubt it will be of any use though.
-    buttons:
-    - text: An umbrella?
-      targetNodeIndex: 4
-      onClickEvent: 0
-    - text: A lobster?
-      targetNodeIndex: 5
-      onClickEvent: 0
-    - text: A donut?
-      targetNodeIndex: 6
       onClickEvent: 0
   - nodeType: 0
-    speakerName: Antonella
-    text: Great idea! Take this umbrella, it will stop the snow from falling on you
-      so you don't catch a cold.
+    speakerName: Gigachella
+    text: Hey! Not cool man!
     buttons:
-    - text: How convenient
+    - text: See ya
       targetNodeIndex: -1
-      onClickEvent: 3
-  - nodeType: 0
-    speakerName: Antonella
-    text: A lobster would've been the perfect item to get us out of a situation like
-      this one, but I'm afraid I don't have any on me right now (I do have an umbrella
-      though).
-    buttons:
-    - text: An umbrella?
-      targetNodeIndex: 4
-      onClickEvent: 0
-    - text: A donut?
-      targetNodeIndex: 6
-      onClickEvent: 0
-  - nodeType: 0
-    speakerName: Antonella
-    text: I'm sorry, I do-nut have any donuts on me (I do have an umbrella though).
-    buttons:
-    - text: An umbrella?
-      targetNodeIndex: 4
-      onClickEvent: 0
-    - text: A lobster?
-      targetNodeIndex: 5
       onClickEvent: 0
