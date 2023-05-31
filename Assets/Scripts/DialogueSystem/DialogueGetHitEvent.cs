@@ -8,7 +8,7 @@ public class DialogueGetHitEvent : MonoBehaviour
 
         if (pp != null)
         {
-            pp.GetHit(Vector3.up * 15 * -Physics.gravity.y, pp.transform.position);
+            pp.GetHit(150 * -Physics.gravity.y * Vector3.up, pp.transform.position);
         }
     }
 }
