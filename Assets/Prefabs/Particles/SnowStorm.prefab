@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1585788151375800654}
   - component: {fileID: 1585788151375801009}
   - component: {fileID: 1585788151375801008}
+  - component: {fileID: 3044394506248251296}
   m_Layer: 0
   m_Name: SnowStorm
   m_TagString: Untagged
@@ -4836,8 +4837,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emissionSpeed: 1
   startingSize: 10
-  MinStartSizeSpeed: 0.1
-  MaxStartSizeSpeed: 0.15
-  maxSnowSizeValue: 1
-  noiseFrequencySpeed: 0.1
-  noiseStrengthSpeed: 0.01
+  MinStartSizeSpeed: 0.01
+  MaxStartSizeSpeed: 0.015
+  maxSnowSizeValue: 0.7
+  noiseFrequencySpeed: 0.01
+  noiseStrengthSpeed: 0.001
+--- !u!114 &3044394506248251296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585788151375801011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67934bef3da60f84e8160e1292b43a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

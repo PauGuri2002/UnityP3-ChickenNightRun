@@ -17,7 +17,7 @@ MonoBehaviour:
     speakerName: Gigachella
     text: Yooooo, wanna see some cool shit bro? Wanna taste my latest creations?
     buttons:
-    - text: Nah
+    - text: No, I hate them
       targetNodeIndex: 1
       onClickEvent: 0
     - text: Ok
@@ -36,9 +36,6 @@ MonoBehaviour:
       the good ol' times, a flavor that makes you wanna party, or a super extreme
       illegal flavor  for bad boys?
     buttons:
-    - text: None
-      targetNodeIndex: 1
-      onClickEvent: 0
     - text: Old times
       targetNodeIndex: 3
       onClickEvent: 3

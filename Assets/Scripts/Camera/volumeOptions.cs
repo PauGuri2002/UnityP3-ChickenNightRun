@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -112,6 +111,12 @@ public class volumeOptions : MonoBehaviour
                 channelMixer.blueOutBlueIn.value = greenLerpValue;
             }
         }
+    }
+
+    public void SetActiveProfile(int index)
+    {
+        activeProfile = profiles[index];
+        Debug.Log(activeProfile.name);
     }
 }
 

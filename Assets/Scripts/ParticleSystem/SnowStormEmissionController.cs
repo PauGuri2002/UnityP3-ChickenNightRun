@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SnowStormEmissionController : MonoBehaviour
-{ 
+{
     [SerializeField]
     public float emissionSpeed = 1f; // Adjust this to control the speed of emission augmentation
 
-    private ParticleSystem particleSystem;
+    private ParticleSystem _particleSystem;
 
     [SerializeField]
     public float startingSize = 10f;
@@ -31,7 +29,7 @@ public class SnowStormEmissionController : MonoBehaviour
 
     private void Start()
     {
-        particleSystem = GetComponent<ParticleSystem>();
+        _particleSystem = GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -42,7 +40,7 @@ public class SnowStormEmissionController : MonoBehaviour
         modifyNoise();
 
     }
-    
+
     private void updateIntensity()
     {
         intensity += Time.deltaTime;
@@ -50,9 +48,9 @@ public class SnowStormEmissionController : MonoBehaviour
 
     private void augmentEmmission()
     {
-        float normalizedTime = intensity / particleSystem.main.duration;
+        float normalizedTime = intensity / _particleSystem.main.duration;
         float emissionRate = intensity * emissionSpeed;
-        var emissionModule = particleSystem.emission;
+        var emissionModule = _particleSystem.emission;
         emissionModule.rateOverTime = emissionRate;
     }
 
@@ -64,13 +62,13 @@ public class SnowStormEmissionController : MonoBehaviour
         }
         minCurveValue = intensity * MinStartSizeSpeed;
         maxCurveValue = intensity * MaxStartSizeSpeed;
-        var mainModule = particleSystem.main;
+        var mainModule = _particleSystem.main;
         mainModule.startSize = new ParticleSystem.MinMaxCurve(minCurveValue, maxCurveValue);
     }
 
     private void modifyNoise()
     {
-        var noiseModule = particleSystem.noise;
+        var noiseModule = _particleSystem.noise;
         noiseModule.frequency = intensity * noiseFrequencySpeed;
         noiseModule.strength = intensity * noiseStrengthSpeed;
     }
