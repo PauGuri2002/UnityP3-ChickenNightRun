@@ -15,45 +15,45 @@ MonoBehaviour:
   nodes:
   - nodeType: 0
     speakerName: Manuela
-    text: Buenas noches! Bienvenido al restaurante.
+    text: Good Evening! Welcome to our restaurant
     buttons:
-    - text: Gracias...?
+    - text: Thanks...?
       targetNodeIndex: 1
       onClickEvent: 0
   - nodeType: 1
     speakerName: Manuela
-    text: "(No parece muy convencido de querer estar aqu\xED, ni que nos lo vayamos
-      a comer o algo...)"
+    text: (They don't seem very convinced to be here, as if we were gonna eat them
+      or something...)
     buttons:
-    - text: Eh, te estoy oyendo
+    - text: Hey, I can hear you
       targetNodeIndex: 2
       onClickEvent: 0
   - nodeType: 2
     speakerName: Manuela
-    text: "\xBFQu\xE9? \xBF\xA1C\xF3mo!? Bueno a lo que iba, puede que tengamos algunos
-      problemillas con... la calefacci\xF3n. Pero no te preocupes, lo arreglaremos
-      en seguida."
+    text: What? How?! Well, anyway, it seems we're having some problems with... the
+      heating. But don't worry, we'll sort it out as soon as possible.
     buttons:
-    - text: "\xBFD\xF3nde est\xE1 mi mesa?"
+    - text: Where's my table?
       targetNodeIndex: 3
       onClickEvent: 0
-    - text: "\xBFNo me vas a cocinar?"
+    - text: Won't you cook me?
       targetNodeIndex: 4
       onClickEvent: 0
   - nodeType: 0
     speakerName: Manuela
-    text: "Su mesa est\xE1 al otro lado de esta sala, a trav\xE9s de la ventana.
-      Ah, y si necesita un poco m\xE1s de luz, detras suyo tiene el interruptor."
+    text: Your table is at the other side of the kitchen, just right outside that
+      portal. Oh, and if you need a little bit more light, there's a light switch
+      right behind you.
     buttons:
-    - text: Muchas gracias
+    - text: Thank you
       targetNodeIndex: -1
       onClickEvent: 0
   - nodeType: 0
     speakerName: Manuela
-    text: "Nah, tengo cosas m\xE1s importantes que hacer ahora mismo. Date una vuelta
-      por ah\xED si quieres, y si te cuesta ver por d\xF3nde vas, detr\xE1s tuyo
-      tienes el interruptor de la luz."
+    text: Nah, I have more important things to worry about now. Just explore the
+      kitchen for a while, and if you're having a hard time seeing where you're going,
+      you can turn on the lights with the switch behind you.
     buttons:
-    - text: De locos
+    - text: Nice
       targetNodeIndex: -1
       onClickEvent: 0

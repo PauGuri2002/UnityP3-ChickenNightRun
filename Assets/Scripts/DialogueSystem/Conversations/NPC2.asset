@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76366f576eeed6542b7bda7a0f329bad, type: 3}
+  m_Name: NPC2
+  m_EditorClassIdentifier: 
+  nodes:
+  - nodeType: 0
+    speakerName: Antonella
+    text: Hey look! It's snowing! It's so beautiful it almost makes me forget I'm
+      being burnt alive by the fires of hell.
+    buttons:
+    - text: If you say so...
+      targetNodeIndex: 1
+      onClickEvent: 0
+  - nodeType: 2
+    speakerName: Antonella
+    text: Actually, I think this snow storm is getting more intense by the second,
+      we should seek shelter immediately!
+    buttons:
+    - text: WHERE DO WE GO
+      targetNodeIndex: 2
+      onClickEvent: 0
+    - text: Any ideas?
+      targetNodeIndex: 3
+      onClickEvent: 0
+  - nodeType: 2
+    speakerName: Antonella
+    text: OH NO! THERE'S NOWHERE TO GO!! WE'RE DOOMED CHICKEN!
+    buttons:
+    - text: '*dies*'
+      targetNodeIndex: -1
+      onClickEvent: 1
+  - nodeType: 1
+    speakerName: Antonella
+    text: Hmmmm, I only have this umbrella on me, I doubt it will be of any use though.
+    buttons:
+    - text: An umbrella?
+      targetNodeIndex: 4
+      onClickEvent: 0
+    - text: A lobster?
+      targetNodeIndex: 5
+      onClickEvent: 0
+    - text: A donut?
+      targetNodeIndex: 6
+      onClickEvent: 0
+  - nodeType: 0
+    speakerName: Antonella
+    text: Great idea! Take this umbrella, it will stop the snow from falling on you
+      so you don't catch a cold.
+    buttons:
+    - text: How convenient
+      targetNodeIndex: -1
+      onClickEvent: 3
+  - nodeType: 0
+    speakerName: Antonella
+    text: A lobster would've been the perfect item to get us out of a situation like
+      this one, but I'm afraid I don't have any on me right now (I do have an umbrella
+      though).
+    buttons:
+    - text: An umbrella?
+      targetNodeIndex: 4
+      onClickEvent: 0
+    - text: A donut?
+      targetNodeIndex: 6
+      onClickEvent: 0
+  - nodeType: 0
+    speakerName: Antonella
+    text: I'm sorry, I do-nut have any donuts on me (I do have an umbrella though).
+    buttons:
+    - text: An umbrella?
+      targetNodeIndex: 4
+      onClickEvent: 0
+    - text: A lobster?
+      targetNodeIndex: 5
+      onClickEvent: 0
