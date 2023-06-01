@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lava
+  m_Name: GrillFire
   m_Shader: {fileID: -6465566751694194690, guid: 917bd45b13a21914280060cdd4b408d6, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -49,15 +49,15 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _NoiseScale: 10
+    - _NoiseScale: 20
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _BaseColor: {r: 0.7490196, g: 0.18039216, b: 0, a: 0}
+    - _BaseColor: {r: 0.5283019, g: 0.26664296, b: 0.26664296, a: 0}
     - _Color: {r: 1.539927, g: 0.123904854, b: 0.01612492, a: 1}
     - _Emission: {r: 0.7490196, g: 0.11764706, b: 0, a: 0}
-    - _NoiseSpeed: {r: 0, g: 0.2, b: 0, a: 0}
-    - _NoiseSpeed2: {r: 0.2, g: 0, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseSpeed2: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7682258031675811450
 MonoBehaviour:
