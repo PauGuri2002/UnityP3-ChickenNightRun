@@ -111,17 +111,20 @@ public class chickenControl : MonoBehaviour
         }
     }
 
-    public void OnInteract()
+    public void OnInteract(InputAction.CallbackContext context)
     {
-        if(availableConversation != null)
+        if (context.started && availableConversation != null)
         {
             availableConversation.ExecuteConversation();
         }
     }
 
-    public void OnPause()
+    public void OnPause(InputAction.CallbackContext context)
     {
-        PauseMenu.instance.ToggleScreen();
+        if (context.started)
+        {
+            PauseMenu.instance.ToggleScreen();
+        }
     }
 
     void Movement()

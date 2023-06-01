@@ -828,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2076103020117425574, guid: 33f2779e8377f2c44b16065a0cd5653a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.849548
+      value: -15.849609
       objectReference: {fileID: 0}
     - target: {fileID: 7954528758050930961, guid: 33f2779e8377f2c44b16065a0cd5653a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9783,31 +9783,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562484501914615938, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.49995
       objectReference: {fileID: 0}
     - target: {fileID: 5562484501914615938, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5562484501966047693, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.49995
       objectReference: {fileID: 0}
     - target: {fileID: 5562484501966047693, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5562484501966047693, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0.49995
       objectReference: {fileID: 0}
     - target: {fileID: 5562484502247207832, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
       propertyPath: m_Name
       value: AudioText
-      objectReference: {fileID: 0}
-    - target: {fileID: 5562484502247207833, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 374.75
       objectReference: {fileID: 0}
     - target: {fileID: 5562484502293578013, guid: 9489a7bf88c665643af57bbd971516e0, type: 3}
       propertyPath: m_MinValue

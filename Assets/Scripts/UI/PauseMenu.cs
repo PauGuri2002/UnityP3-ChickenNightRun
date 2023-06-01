@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu instance;
     [SerializeField] private SettingsMenu settingsMenu;
+    private Animator animator;
 
     public void Start()
     {
@@ -14,23 +13,33 @@ public class PauseMenu : MonoBehaviour
             Destroy(instance.gameObject);
         }
 
+        animator = GetComponent<Animator>();
         instance = this;
         gameObject.SetActive(false);
     }
 
     public void ShowScreen()
     {
+        Debug.Log("Showing screen");
         gameObject.SetActive(true);
+        animator.SetBool("Open", true);
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
     }
 
     public void HideScreen()
     {
-        gameObject.SetActive(false);
+        Debug.Log("Hiding screen");
+        animator.SetBool("Open", false);
+        Invoke("DeactivateScreen", 1);
         settingsMenu.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
+    }
+
+    private void DeactivateScreen()
+    {
+        gameObject.SetActive(false);
     }
 
     public void ToggleScreen()
@@ -38,7 +47,8 @@ public class PauseMenu : MonoBehaviour
         if (gameObject.activeSelf)
         {
             HideScreen();
-        } else
+        }
+        else
         {
             ShowScreen();
         }
